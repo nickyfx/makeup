@@ -1,0 +1,86 @@
+@import 'bootstrap-custom';
+
+body {
+  font-weight: 400;
+}
+
+section {
+  margin-bottom: 2.5em;
+}
+
+/*
+.cursive {
+  font-family: 'Special Elite', cursive;
+  font-weight: bold;
+  color: #990100;
+  font-size: 1.5em;
+  line-height: 0;
+  letter-spacing: -0.175em;
+  vertical-align: middle;
+}
+*/
+
+.navbar {
+  .navbar-brand {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    font-size: 24px;
+
+    padding: 0 15px;
+
+    img {
+      display: inline-block;
+      width: 64px;
+    }
+  }
+
+  .navbar-nav {
+    text-transform: uppercase;
+
+    > li {
+      font-size: 14px;
+
+      > a {
+        padding-top: 25px;
+        padding-bottom: 9px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.splash-container {
+  background: no-repeat center center;
+  background-size: cover;
+
+  background-image: url(../img/cover.jpg);
+
+  .splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+  }
+}
+
+.hero {
+  text-align: center;
+
+  .heading, p {
+    color: white;
+  }
+
+  .heading {
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+}
