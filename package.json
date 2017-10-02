@@ -6,7 +6,8 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-scroll-to-component": "^1.0.1"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",

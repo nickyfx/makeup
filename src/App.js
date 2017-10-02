@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Button, Col, Grid, Row} from "react-bootstrap";
+import {Button, Col, Grid, Row} from 'react-bootstrap';
+import scrollToComponent from 'react-scroll-to-component';
 
 class App extends Component {
     render() {
@@ -14,15 +15,22 @@ class App extends Component {
                             <p>
                                 Bringing your vision to life
                             </p>
-                            <Button bsStyle="primary" onClick={() => this.form.scrollIntoView()}>
+                            <Button bsStyle="primary" onClick={() => scrollToComponent(this.beauty)}>
                                 Call to Action
                             </Button>
                         </div>
                     </Grid>
                 </section>
 
-                <section>
+                <section ref={beauty => this.beauty = beauty}>
                     <Grid>
+                        <Row>
+                            <Col sm={12}>
+                                <h3>Beauty</h3>
+                                <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            </Col>
+                        </Row>
+
                         <Row>
                             <Col sm={8}>
                                 <p>
