@@ -8,18 +8,6 @@ section {
   margin-bottom: 2.5em;
 }
 
-/*
-.cursive {
-  font-family: 'Special Elite', cursive;
-  font-weight: bold;
-  color: #990100;
-  font-size: 1.5em;
-  line-height: 0;
-  letter-spacing: -0.175em;
-  vertical-align: middle;
-}
-*/
-
 .navbar {
   .navbar-brand {
     font-family: $headings-font-family;
@@ -82,5 +70,9 @@ section {
   p {
     font-size: 1.5em;
     margin-bottom: 30px;
+  }
+
+  .btn:not(:last-child) {
+    margin-right: 15px;
   }
 }

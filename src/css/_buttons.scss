@@ -1,0 +1,3 @@
+.btn-outline-primary {
+  @include button-outline-variant(white, $text-color);
+}
