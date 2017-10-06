@@ -16,7 +16,7 @@ class App extends Component {
                                 Bringing your vision to life
                             </p>
 
-                            <Button bsSize="large" className="btn-outline-primary" onClick={() => scrollToComponent(this.beauty)}>
+                            <Button bsStyle="primary" bsSize="large" className="btn-outline-primary" onClick={() => scrollToComponent(this.beauty)}>
                                 Beauty
                             </Button>
                             <Button bsSize="large" className="btn-outline-primary" onClick={() => scrollToComponent(this.blood)}>
