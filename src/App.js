@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Col, Grid, Image, Nav, Navbar, NavItem, Row} from 'react-bootstrap';
+import Icon from "react-fontawesome";
 import scrollToComponent from 'react-scroll-to-component';
 
 import dark from "./img/dark.jpg"
@@ -37,6 +38,10 @@ import IMG_9008 from "./img/IMG_9008.jpg"
 import IMG_9705 from "./img/IMG_9705.jpg"
 import IMG_9756 from "./img/IMG_9756.jpg"
 
+const FACEBOOK = 'https://www.facebook.com/nicky.campbell.568/';
+const INSTAGRAM = 'https://www.instagram.com/nicky_soup/';
+const EMAIL = 'mailto:n13campbell@gmail.com';
+
 class App extends Component {
     render() {
         return (
@@ -46,13 +51,27 @@ class App extends Component {
                         <Navbar.Brand>
                             <Image src={lips} responsive/> NickyFx Makeup
                         </Navbar.Brand>
+                        <Navbar.Toggle />
                     </Navbar.Header>
-                    <Nav>
-                        <NavItem eventKey={1} href="#" onClick={() => scrollToComponent(this.beauty)}>Beauty</NavItem>
-                        <NavItem eventKey={2} href="#" onClick={() => scrollToComponent(this.body_art)}>Body Art</NavItem>
-                        <NavItem eventKey={3} href="#" onClick={() => scrollToComponent(this.sculpt)}>Sculpt</NavItem>
-                        <NavItem eventKey={3} href="#" onClick={() => scrollToComponent(this.effects)}>Effects</NavItem>
-                    </Nav>
+                    <Navbar.Collapse>
+                        <Nav>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.beauty)}>Beauty</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.body_art)}>Body Art</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.sculpt)}>Sculpt</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.effects)}>Effects</NavItem>
+                        </Nav>
+                        <Nav pullRight>
+                            <NavItem href={FACEBOOK}>
+                                <Icon name='facebook-square' size='lg' style={{marginRight: '-15px'}}/>
+                            </NavItem>
+                            <NavItem href={INSTAGRAM}>
+                                <Icon name='instagram' size='lg' style={{marginRight: '-15px'}}/>
+                            </NavItem>
+                            <NavItem href={EMAIL}>
+                                <Icon name='envelope-o' size='lg'/>
+                            </NavItem>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Navbar>
 
                 <section className="splash-container">
@@ -160,7 +179,7 @@ class App extends Component {
                 </section>
 
                 <section ref={blood => this.blood = blood}>
-                    <Image src={dark}/>
+                    <Image src={dark} responsive/>
                 </section>
 
                 <section ref={sculpt => this.sculpt = sculpt}>
