@@ -39,7 +39,7 @@ import IMG_9008 from "./img/IMG_9008.jpg"
 import IMG_9705 from "./img/IMG_9705.jpg"
 import IMG_9756 from "./img/IMG_9756.jpg"
 
-const FACEBOOK = 'https://www.facebook.com/nicky.campbell.568/';
+const FACEBOOK = 'https://www.facebook.com/NickySoupSFX/';
 const INSTAGRAM = 'https://www.instagram.com/nicky_soup/';
 const EMAIL = 'n13campbell@gmail.com';
 
@@ -96,7 +96,6 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Beauty</h3>
-                                <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                             </Col>
                         </Row>
 
@@ -137,7 +136,6 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Body Art</h3>
-                                <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                             </Col>
                         </Row>
 
@@ -182,7 +180,6 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Sculpt</h3>
-                                <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                             </Col>
                         </Row>
 
@@ -203,13 +200,10 @@ class App extends Component {
 
                         <Row className="mb-5">
                             <Col sm={3}>
-                                <Image src={IMG_1773} responsive/>
-                            </Col>
-                            <Col sm={3}>
-                                <Image src={IMG_1774} responsive/>
-                            </Col>
-                            <Col sm={3}>
                                 <Image src={IMG_1189} responsive/>
+                            </Col>
+                            <Col sm={3}>
+                                <Image src={IMG_1715} responsive/>
                             </Col>
                         </Row>
                     </Grid>
@@ -220,7 +214,6 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Effects</h3>
-                                <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                             </Col>
                         </Row>
 
@@ -232,25 +225,31 @@ class App extends Component {
                                 <Image src={IMG_1772} responsive/>
                             </Col>
                             <Col sm={3}>
-                                <Image src={IMG_1770} responsive/>
+                                <Image src={IMG_1773} responsive/>
                             </Col>
                             <Col sm={3}>
-                                <Image src={IMG_1771} responsive/>
+                                <Image src={IMG_1774} responsive/>
                             </Col>
                         </Row>
 
                         <Row className="mb-5">
                             <Col sm={3}>
-                                <Image src={IMG_0851} responsive/>
+                                <Image src={IMG_1770} responsive/>
                             </Col>
                             <Col sm={3}>
-                                <Image src={IMG_0943} responsive/>
+                                <Image src={IMG_1771} responsive/>
+                            </Col>
+                            <Col sm={3}>
+                                <Image src={IMG_0851} responsive/>
                             </Col>
                             <Col sm={3}>
                                 <Image src={IMG_0813} responsive/>
                             </Col>
+                        </Row>
+
+                        <Row>
                             <Col sm={3}>
-                                <Image src={IMG_1715} responsive/>
+                                <Image src={IMG_0943} responsive/>
                             </Col>
                         </Row>
                     </Grid>
