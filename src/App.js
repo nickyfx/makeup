@@ -26,6 +26,7 @@ import IMG_1757 from "./img/IMG_1757.jpg"
 import IMG_1764 from "./img/IMG_1764.jpg"
 import IMG_1765 from "./img/IMG_1765.jpg"
 import IMG_1766 from "./img/IMG_1766.jpg"
+import IMG_1768 from "./img/IMG_1768.jpg"
 import IMG_1770 from "./img/IMG_1770.jpg"
 import IMG_1771 from "./img/IMG_1771.jpg"
 import IMG_1772 from "./img/IMG_1772.jpg"
@@ -40,7 +41,7 @@ import IMG_9756 from "./img/IMG_9756.jpg"
 
 const FACEBOOK = 'https://www.facebook.com/nicky.campbell.568/';
 const INSTAGRAM = 'https://www.instagram.com/nicky_soup/';
-const EMAIL = 'mailto:n13campbell@gmail.com';
+const EMAIL = 'n13campbell@gmail.com';
 
 class App extends Component {
     render() {
@@ -49,32 +50,26 @@ class App extends Component {
                 <Navbar fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <Image src={lips} responsive/> NickyFx Makeup
+                            <Button className="navbar-brand" bsStyle="link" onClick={() => scrollToComponent(this.top)}>
+                                <Image src={lips} responsive/> NickyFx Makeup
+                            </Button>
                         </Navbar.Brand>
-                        <Navbar.Toggle />
+                        <Navbar.Toggle/>
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav>
-                            <NavItem href="#" onClick={() => scrollToComponent(this.beauty)}>Beauty</NavItem>
-                            <NavItem href="#" onClick={() => scrollToComponent(this.body_art)}>Body Art</NavItem>
-                            <NavItem href="#" onClick={() => scrollToComponent(this.sculpt)}>Sculpt</NavItem>
-                            <NavItem href="#" onClick={() => scrollToComponent(this.effects)}>Effects</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.beauty)}>BEAUTY</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.body_art)}>BODY ART</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.sculpt)}>SCULPT</NavItem>
+                            <NavItem href="#" onClick={() => scrollToComponent(this.effects)}>EFFECTS</NavItem>
                         </Nav>
                         <Nav pullRight>
-                            <NavItem href={FACEBOOK}>
-                                <Icon name='facebook-square' size='lg' style={{marginRight: '-15px'}}/>
-                            </NavItem>
-                            <NavItem href={INSTAGRAM}>
-                                <Icon name='instagram' size='lg' style={{marginRight: '-15px'}}/>
-                            </NavItem>
-                            <NavItem href={EMAIL}>
-                                <Icon name='envelope-o' size='lg'/>
-                            </NavItem>
+                            <NavItem href={"mailto:" + EMAIL}>{EMAIL}</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
 
-                <section className="splash-container">
+                <section className="splash-container" ref={top => this.top = top}>
                     <Grid className="splash">
                         <div className="hero">
                             <h1 className="heading">
@@ -256,6 +251,37 @@ class App extends Component {
                             </Col>
                             <Col sm={3}>
                                 <Image src={IMG_1715} responsive/>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </section>
+
+                <section className="contact">
+                    <Grid>
+                        <Row className="mb-5">
+                            <Col sm={3}>
+                                <Image src={IMG_1768} responsive/>
+                            </Col>
+                            <Col sm={9}>
+                                <div className="d-flex align-items-end flex-column" style={{height: "250px"}}>
+                                    <div>
+                                        <h3 className="mt-0">Drop me a line</h3>
+                                        <p>
+                                            A parturient bibendum per parturient parturient est ut mollis viverra
+                                            aid hacsemper gravida nunc potenti a sem per mattis imperdiet
+                                            condimentumfringilla enim.Magnis nunc faucibus viverra fames mauris
+                                            suspendisse nibh variusmalesuada placeratnon vestibulum id penatibus
+                                            parturient penatibus a.
+                                        </p>
+                                    </div>
+                                    <div className="mt-auto">
+                                        <ul className="list-inline">
+                                            <li><a href={"mailto:" + EMAIL}>{EMAIL}</a></li>
+                                            <li><a href={FACEBOOK}><Icon name='facebook-square' size='2x'/></a></li>
+                                            <li><a href={INSTAGRAM}><Icon name='instagram' size='2x'/></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </Col>
                         </Row>
                     </Grid>
