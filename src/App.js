@@ -8,7 +8,6 @@ import lips from "./img/emoji_lips.png";
 
 import IMG_0813 from "./img/IMG_0813.jpg"
 import IMG_0851 from "./img/IMG_0851.jpg"
-import IMG_0943 from "./img/IMG_0943.jpg"
 import IMG_1183 from "./img/IMG_1183.jpg"
 import IMG_1189 from "./img/IMG_1189.jpg"
 import IMG_1192 from "./img/IMG_1192.jpg"
@@ -84,7 +83,10 @@ class App extends Component {
                                 Beauty
                             </Button>
                             <Button bsSize="large" className="btn-outline-primary"
-                                    onClick={() => scrollToComponent(this.blood)}>
+                                    onClick={() => scrollToComponent(this.blood, {
+                                        align: 'bottom',
+                                        offset: 185
+                                    })}>
                                 Blood
                             </Button>
                         </div>
@@ -96,6 +98,12 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Beauty</h3>
+                                <p>
+                                    Whether you’re looking for a subtle daytime glow, or stunning nighttime glamour, I
+                                    can bring your desired look to life with traditional or airbrushed techniques. Want
+                                    to take it a step further? Let’s create a period specific look from whatever decade
+                                    inspires you.
+                                </p>
                             </Col>
                         </Row>
 
@@ -136,6 +144,11 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Body Art</h3>
+                                <p>
+                                    Curious about the world of body art? I offer base to full-body airbrushing and hand
+                                    painting, transforming your body into a work of art. Tell me your concept, or show
+                                    me your ideal picture, and I’ll create your unforgettable look.
+                                </p>
                             </Col>
                         </Row>
 
@@ -180,6 +193,11 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Sculpt</h3>
+                                <p>
+                                    I love fabricating and experimenting with different materials. An experienced life
+                                    caster (creating a bust to sculpt from) and prosthetics applicator, I can build your
+                                    vision in gelatin or foam latex. If you can dream it, I can craft it.
+                                </p>
                             </Col>
                         </Row>
 
@@ -214,6 +232,13 @@ class App extends Component {
                         <Row>
                             <Col sm={12}>
                                 <h3>Effects</h3>
+                                <p>
+                                    Take a trip to the wild side and delve into my box of horror. I offer everything
+                                    from out of kit effects, to prosaid transfers, and hand crafted silicone, latex and
+                                    gelatin pieces. Whether you’re looking for a subtle effect like bruising or cuts, or
+                                    a deadly vision of exposed flesh, broken bones, and gore, I can make even your
+                                    creepiest nightmares come true.
+                                </p>
                             </Col>
                         </Row>
 
@@ -246,17 +271,17 @@ class App extends Component {
                                 <Image src={IMG_0813} responsive/>
                             </Col>
                         </Row>
-
-                        <Row>
-                            <Col sm={3}>
-                                <Image src={IMG_0943} responsive/>
-                            </Col>
-                        </Row>
                     </Grid>
                 </section>
 
                 <section className="contact">
                     <Grid>
+                        <Row>
+                            <Col sm={12}>
+                                <h3>About Me</h3>
+                            </Col>
+                        </Row>
+
                         <Row className="mb-5">
                             <Col sm={3}>
                                 <Image src={IMG_1768} responsive/>
@@ -264,13 +289,30 @@ class App extends Component {
                             <Col sm={9}>
                                 <div className="d-flex align-items-end flex-column" style={{height: "250px"}}>
                                     <div>
-                                        <h3 className="mt-0">Drop me a line</h3>
                                         <p>
-                                            A parturient bibendum per parturient parturient est ut mollis viverra
-                                            aid hacsemper gravida nunc potenti a sem per mattis imperdiet
-                                            condimentumfringilla enim.Magnis nunc faucibus viverra fames mauris
-                                            suspendisse nibh variusmalesuada placeratnon vestibulum id penatibus
-                                            parturient penatibus a.
+                                            I’m a graduate of the JCI Make-up Artistry program. Whether it’s beauty
+                                            make-up, body art or bringing an entirely unique character to life, this is
+                                            my passion. I love the creative freedom and brilliant transformations from
+                                            ordinary to art this medium allows me. I can’t wait to share my inspiration
+                                            with you.
+                                        </p>
+
+                                        <p>
+                                            I am a proud IMATS Battle of the Brushes finalist, representing JCI and
+                                            competing in the Character/Prosthetics Awards Show on October 14, 2017 in
+                                            Vancouver. <a
+                                            href="http://www.jcinstitute.com/imats-battle-brushes-finalist-spotlights-nicky-campbell/">Read
+                                            a full interview about my journey and relationship to the
+                                            world of makeup.</a>
+                                        </p>
+
+                                        <p>
+                                            Connect with me on your inspirations via <a
+                                            href={"mailto:" + EMAIL}>email</a>, <a href={FACEBOOK}>Facebook</a>, or <a
+                                            href={INSTAGRAM}>Instagram</a>.
+                                        </p>
+                                        <p>
+                                            Together, we can bring your vision to life.
                                         </p>
                                     </div>
                                     <div className="mt-auto">
